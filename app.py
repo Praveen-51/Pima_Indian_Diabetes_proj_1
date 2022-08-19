@@ -48,8 +48,9 @@ def predict():
         return render_template('result.html',pred=f'You have a chance of having diabetes.\n probability of having diabetic is: {val_pred*100}% \n Excercise daily')
     else:
         val_pred = round(prediction[0][0],4)
+        
         return render_template('result.html',pred=f'Congrats!!!!! you are safe.\n probability of being non- diabetic is:{val_pred*100}% \n You are in safe zone.\n\n workout daily to keep healthy and going')
-
+        # return render_template('result.html',pred=f'Congrats!!!!! you are safe.\n probability of being non- diabetic is:{prediction[0][0]*100:.2f}% \n You are in safe zone.\n\n workout daily to keep healthy and going') .2f gives the number of decimals
 
 if __name__=='__main__':
     app.run(debug=True)
