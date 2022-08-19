@@ -18,4 +18,3 @@ Werkzeug==2.2.2
 wincertstore==0.2
 xgboost==1.6.1
 zipp==3.8.1
-gunicorn
